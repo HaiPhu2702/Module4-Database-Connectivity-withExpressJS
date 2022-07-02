@@ -1,0 +1,32 @@
+<table class="table table-hover table-dark">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">type</th>
+        <th scope="col">author</th>
+        <th scope="col">NXB</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%
+    data.forEach((value, key) =>{
+    %>
+        <tr>
+            <td><%= key+1 %></td>
+            <td><%= value.name %></td>
+            <td><%= value.type %></td>
+            <td><%= value.author %></td>
+            <td><%= value.NXB %></td>
+        </tr>
+    <%
+    })
+    %>
+    </tbody>
+</table>
+
+
+
+
+
+

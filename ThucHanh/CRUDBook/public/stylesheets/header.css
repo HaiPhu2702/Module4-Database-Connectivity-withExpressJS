@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+}
+body {
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+}
+
+
+.page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+}
+
+.page__header {
+     grid-area: header;
+     text-align: center;
+     background-color: #0cbaba;
+     background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+     position: sticky;
+     top: 0;
+ }
+

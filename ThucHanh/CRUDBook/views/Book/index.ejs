@@ -1,0 +1,47 @@
+
+<a href="/book/create">ADD</a>
+<br>
+  <table class="table table-dark">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col" colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%
+      data.forEach((value, key) =>{ %>
+      <tr>
+        <td ><%=key+1 %></td>
+        <td ><%= value.name %></td>
+        <td ><%= value.type %></td>
+        <td >
+          <button> <a href='/book/delete/<%= value.idBook %>'>DELETE</a></button>
+          <button> <a href='/book/detail/<%= value.idBook %>'>DETAIL</a></button>
+        </td>
+      </tr>
+    <%
+    }
+    )
+    %>
+    </tbody>
+  </table>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="/book/prev">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="/book?page=1">1</a></li>
+    <li class="page-item"><a class="page-link" href="/book?page=2">2</a></li>
+    <li class="page-item"><a class="page-link" href="/book?page=3">3</a></li>
+    <li class="page-item"><a class="page-link" href="/book/next">Next</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
